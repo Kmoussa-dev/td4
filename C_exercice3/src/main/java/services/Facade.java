@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,7 +23,9 @@ public class Facade {
      * @return
      */
     public Produit findById(int idProduit) {
-        return null;
+        Query q=em.createQuery("Select p From Produit p where p.idProduit=:idp");
+        q.setParameter("idp",idProduit);
+        return (Produit) q.getSingleResult();
     }
 
     /**
@@ -30,6 +33,9 @@ public class Facade {
      * @return
      */
     public Produit plusGrosseVenteQuantite() {
+        Query q=em.createQuery("Select p From Produit p join LigneVente lv on lv.produit.idProduit " +
+                "");
+        q.setParameter("idp",idProduit);
         return null;
     }
 

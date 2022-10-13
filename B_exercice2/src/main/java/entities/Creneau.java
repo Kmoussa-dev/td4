@@ -3,7 +3,6 @@ package entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
