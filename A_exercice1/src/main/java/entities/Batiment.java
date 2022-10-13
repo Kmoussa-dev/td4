@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Batiment {
@@ -15,5 +16,5 @@ public class Batiment {
     private UFR batiments;
 
     @OneToMany
-    private Salle salles;
+    private List<Salle> salles;
 }
