@@ -1,0 +1,1 @@
+insert into PERSONNEL(IDPERSO,NOM,PRENOM) VALUES (1,'Valjean','Jean');
